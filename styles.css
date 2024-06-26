@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("./back.png");
+    background-size: cover; /* Ensures the background image covers the entire body */
+    background-position: center; /* Centers the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 360px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #333;
+}
+
+.header #date-time {
+    font-size: 20px; /* Reduced font size for date and time */
+    color: #666;
+    margin-top: 8px;
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+li button {
+    margin-left: 8px;
+}
+
+.complete-btn, .edit-btn, .delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.complete-btn:hover i, .edit-btn:hover i, .delete-btn:hover i {
+    color: #007BFF;
+}
+
+.complete-btn i {
+    color: #28a745;
+}
+
+.edit-btn i {
+    color: #ff9800;
+}
+
+.delete-btn i {
+    color: #f44336;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.hidden {
+    display: none;
+}
+
+#limit-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+#celebration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.confetti-container {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    width: 10px;
+    height: 10px;
+    background-color: var(--confetti-color);
+    position: absolute;
+    animation: fall 3s infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
